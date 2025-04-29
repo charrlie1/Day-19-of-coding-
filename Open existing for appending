@@ -1,0 +1,11 @@
+try:
+    file_handle = open("meter_readings.txt", 'a')
+    file_handle.write("2025-04-29 21:15:00, 1.21\n")
+    print("New reading appended to meter_readings.txt")
+    file_handle.close()
+except FileNotFoundError:
+    print("Error: meter_readings.txt not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+#This code opens the meter_readings.txt file in append mode and adds a new smart meter reading to the end of the file
